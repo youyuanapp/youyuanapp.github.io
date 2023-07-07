@@ -9,9 +9,9 @@
 	<link href="https://oss.dclouds.cloud/github/layui/css/layui.css" rel="stylesheet">
 </head>
 <body>
-<img src="https://oss.dclouds.cloud/github/logo.png" style="width:150px;margin:50px auto 0px;display: block;" onclick="setshare()"/>
-<a href="" target="_blank"><img src="https://oss.dclouds.cloud/github/android.png" class="button" onclick="fun()"></a>
-<a href="" target="_blank"><img src="https://oss.dclouds.cloud/github/ios.png" class="button" onclick="fun()"></a>
+<img src="https://oss.dclouds.cloud/github/logo.png" style="width:150px;margin:50px auto 0px;display: block;" onclick="set()"/>
+<a href="" target="_blank"><img src="https://oss.dclouds.cloud/github/android.png" class="button" onclick="set()"></a>
+<a href="" target="_blank"><img src="https://oss.dclouds.cloud/github/ios.png" class="button" onclick="set()"></a>
 <div class="box" id="box">
 	<div class="layui-carousel" id="ID-carousel-demo-image" style="margin:auto;border-radius: 25px;">
 	  <div carousel-item style="border-radius: 25px;">
@@ -59,7 +59,7 @@ layui.use(function(){
   });
 });
 
-function setshare(){
+function set(){
 	let txt = "https://youyuanapp.github.io";
 	let txa = document.createElement('textarea')
 	txa.value = txt
@@ -67,11 +67,8 @@ function setshare(){
 	txa.select(); // 选择对象;
 	document.execCommand("Copy"); // 执行浏览器复制命令
 	// 复制成功提示;
-	alert('截图！防失联！\nhttps://youyuanapp.github.io');
+	alert('截图保存网址！防失联！\nhttps://youyuanapp.github.io');
 	txa.remove()
-}
-function fun() {
-	alert('截图！防失联！\nhttps://youyuanapp.github.io');
 }
 </script>
 </body>
