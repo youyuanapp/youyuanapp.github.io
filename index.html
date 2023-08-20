@@ -21,6 +21,7 @@
 <div style="width:100%;text-align:center;color:#ffffff;font-size:16px">返回桌面查看安装进度<br>安装完成后点此跳转 > 信任证书</div>
 </a>
 <div class="txt">
+<div id="tick"></div>
 <h5>&ensp;&ensp;安装说明：</h5>
 <h6>【苹果】
 <br>1. 请先卸载旧版本后再安装;
@@ -75,6 +76,12 @@
 <script type="text/javascript" src="https://oss.dclouds.cloud/github/jquery.min.js"></script>
 <script src="https://oss.dclouds.cloud/github/layui/layui.js"></script>
 <script>
+var ua = navigator.userAgent.toLowerCase();
+if (ua.match(/MicroMessenger/i) == "micromessenger" || ua.match(/Twitter/i) == "twitter") {
+	tick.innerText = "iOS请在Safari浏览器中打开！Android请在其它浏览器中打开！";
+}
+
+
 layui.use(function(){
   var carousel = layui.carousel;
   carousel.render({
