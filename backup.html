@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="有原">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, maximum-scale=1.0, user-scalable=no">
+	<title>有原</title>
+	<link href="https://oss.dclouds.cloud/github/favicon.ico" rel="icon">
+	<link href="https://oss.dclouds.cloud/github/layui/css/layui.css" rel="stylesheet">
+</head>
+<body>
+<img src="https://oss.dclouds.cloud/github/logo.png" style="width:150px;margin:50px auto 0px;display: block;" onclick="set(0)"/>
+
+<div id="tick"></div>
+
+<a href="https://oss.dclouds.cloud/uyuan.apk" target="_blank"><img src="https://oss.dclouds.cloud/github/android.png" class="button" onclick="set(2)"></a>
+<a href="https://oss.dclouds.cloud/%E9%98%B2%E5%A4%B1%E8%81%94%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85.apk" target="_blank" style="display:none;" class="trust2">
+<div style="width:100%;text-align:center;color:black;font-size:16px">点此安装：永久防失联书签【安卓推荐安装】</div>
+</a>
+
+<a href="itms-services://?action=download-manifest&url=https://oss.dclouds.cloud/uyuan.plist" target="_blank"><img src="https://oss.dclouds.cloud/github/ios.png" class="button" onclick="set(1)"></a>
+<a href="/book.html" target="_blank" style="display:none;" class="trust">
+<div style="width:100%;text-align:center;color:black;font-size:16px">点此安装：永久防失联书签【iOS推荐】</div>
+</a>
+<br>
+<a href="https://oss.dclouds.cloud/embedded.mobileprovision" target="_blank" style="display:none;" class="trust">
+<div style="width:100%;text-align:center;color:#ffffff;font-size:16px">返回桌面查看安装进度<br>安装完成后点此跳转 > 信任证书</div>
+</a>
+<div class="txt">
+<h5>&ensp;&ensp;安装说明：</h5>
+<h6>【苹果】
+<br>1. 请先卸载旧版本后再安装;
+<br>2. 请使用苹果Safari浏览器安装;
+<br>3. 没有跳转信任证书，请手动前往“设置”、“通用”、“VPN与设备管理”、“找到并信任应用”;
+<br>4. 如果无法安装，请前往“设置”、“Safari浏览器”、“请求桌面网站”、“所有网站”、“关闭”后刷新页面重新下载！
+<br>
+<br>【安卓】
+<br>1. 打不开本站请尝试换其它浏览器;
+<br>2. 下载后请在下载管理、文件管理或者通知栏里面找APK安装包！安装包解析失败请重新下载！
+</h6></div>
+
+<div class="box" id="box">
+	<div class="layui-carousel" id="ID-carousel-demo-image" style="margin:auto;border-radius: 25px;">
+	  <div carousel-item style="border-radius: 25px;">
+		<div><img src="https://oss.dclouds.cloud/github/1.jpg" width="100%" height="100%"></div>
+		<div><img src="https://oss.dclouds.cloud/github/2.jpg" width="100%" height="100%"></div>
+		<div><img src="https://oss.dclouds.cloud/github/3.jpg" width="100%" height="100%"></div>
+		<div><img src="https://oss.dclouds.cloud/github/4.jpg" width="100%" height="100%"></div>
+		<div><img src="https://oss.dclouds.cloud/github/5.jpg" width="100%" height="100%"></div>
+	  </div>
+	</div>
+</div>
+<style>
+	* {
+		margin: 0;
+		padding: 0
+	}
+	body {
+		background:url('https://oss.dclouds.cloud/github/bg.png');
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-size: 115% 115%;
+		background-position:center;
+	}
+	.box {
+		margin:20px auto;
+	}
+	.button {
+		width:200px;
+		margin: 10px auto;
+		display: block;
+		border-radius: 25px;
+	}
+	.txt {
+		width:350px;
+		margin: 10px auto;
+		display: block;
+		border-radius: 25px;
+	}
+</style>
+<script type="text/javascript" src="https://oss.dclouds.cloud/github/jquery.min.js"></script>
+<script src="https://oss.dclouds.cloud/github/layui/layui.js"></script>
+<script>
+var ua = navigator.userAgent.toLowerCase();
+if (ua.match(/MicroMessenger/i) == "micromessenger" || ua.match(/Twitter/i) == "twitter") {
+	tick.innerText = "iOS请在Safari浏览器中打开！Android请在其它浏览器中打开！";
+}
+
+
+layui.use(function(){
+  var carousel = layui.carousel;
+  carousel.render({
+    elem: '#ID-carousel-demo-image',
+    width: 300,
+    height: 533,
+	anim:'fade',
+    interval: 2000
+  });
+});
+
+function set(code){
+	if(code == 1){
+        $('.trust').show();
+    }
+	if(code == 2){
+        $('.trust2').show();
+    }
+	let txt = "https://youyuanapp.github.io";
+	let txa = document.createElement('textarea')
+	txa.value = txt
+	document.body.appendChild(txa);
+	txa.select(); // 选择对象;
+	document.execCommand("Copy"); // 执行浏览器复制命令
+	// 复制成功提示;
+	alert('截图保存网址！防失联！\nhttps://youyuanapp.github.io');
+	txa.remove()
+}
+</script>
+</body>
+</html>

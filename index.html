@@ -1,120 +1,264 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="keywords" content="有原">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, maximum-scale=1.0, user-scalable=no">
-	<title>有原</title>
-	<link href="https://oss.dclouds.cloud/github/favicon.ico" rel="icon">
-	<link href="https://oss.dclouds.cloud/github/layui/css/layui.css" rel="stylesheet">
-</head>
-<body>
-<img src="https://oss.dclouds.cloud/github/logo.png" style="width:150px;margin:50px auto 0px;display: block;" onclick="set(0)"/>
+<html lang="zh-CN">
+	<head>
+		<title>有原</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="keywords" contect="有原">
+		<meta name="description" contect="有原">
+		<meta name="author" contect="有原">
+		<meta name="robots" contect= "all">
+		<link href="https://oss.dclouds.cloud/github/favicon.ico" rel="icon">
+		<link href="https://oss.dclouds.cloud/github/layui/css/layui.css" rel="stylesheet">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				color:#4D5656;
+			}
+			body {
+				background-color: #ecf0f3;
+			}
+			.container {
+				width: 90%;
+				height: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index:1;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			.content {
+				//width: 100%;
+				//height: 90%;
+				margin-top:20px;
+				background-color: #ecf0f3;
+				border-radius: 15px;
+				box-shadow: 5px 5px 10px #b1b4b6,-5px -5px 10px #ffffff;
+			}
+			.content section{
+				position: absolute;
+				opacity: 0;
+				transition: .4s ease-out;
+			}
+			.content section.active-section{
+				opacity: 1;
+			}
+			.main {
+				width: 100%;
+				height: 100%;
+				z-index:1;
+				display:inline-block;
+				position:relative;
+				overflow: hidden;
+				border-radius: 10px;
+			}
+			.bgt {
+				background-repeat: no-repeat;
+				background-size: cover;
+				width:100%;
+			}
+			.box{
+				margin-top:10px;
+				border-radius: 15px;
+				padding:10px;
+				margin-bottom:10px;
+				background: #ecf0f3;
+				box-shadow: inset 5px 5px 10px #b1b4b6,
+					inset -5px -5px 10px #ffffff;
+			}
+			#boxs{
+				margin:0px;
+				height: 100%;
+				overflow-x: hidden;
+				overflow-y: scroll;
+			}
+			#boxs::-webkit-scrollbar{
+				width: 5px;
+				height: 5px;
+			}
+			#boxs::-webkit-scrollbar-track{
+				border-radius: 12px;
+				background-color: #eee;
+			}
+			#boxs::-webkit-scrollbar-thumb{
+				border-radius: 12px;
+				background-color: #aaa;
+			}
+			.web{
+				width:90%;
+				height:20px;
+				text-align:center;
+				background: #fafafa 
+				repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);
+				box-shadow:0 2px 5px rgba(0,0,0,.15);
+				margin:0 auto;
+				margin-top:0px;
+				margin-bottom:10px;
+				padding:10px;
+				border-radius:5px;
+				font-size:15px;
+				font-weight: bold;
+			}
+			.tips{
+				width:90%;
+				border-bottom-right-radius: 2px;
+				border-left: 4px solid #2ECC71;
+				border-top-right-radius: 2px;
+				margin: 0 auto;
+				//text-align:center;
+				padding: 3px;
+				position: relative;
+				background-color: #f8f8f8;
+				font-size:12px;
+			}
+			.A {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container"><!-- 主体开始 -->
+			<div class="content"><!-- 内容开始 -->
+				<section class="home-me-section active-section"><!-- 首页开始 -->
+					<div class="main"><!-- 站点内容开始 -->
+					
+						<img src="https://oss.dclouds.cloud/github/youyuangithub.jpg" class="bgt" />
+						<div class="box">
+							<div id="boxs">
+						        <div class="tips" id="tick">未检测到使用的设备类型</div>
+					        </div>
+					    </div>
+						
+						<div id="android_show" style="display:none;">
+						<div class="box">
+							<div id="boxs">
+								<div class="track-list"><!-- 时间轴开始 -->
+									<ul>
+										<a href="https://oss.dclouds.cloud/uyuan.apk" target="_blank" class="A"><div class="web">1. 安卓免费下载</div></a>
+										<a href="https://oss.dclouds.cloud/%E9%98%B2%E5%A4%B1%E8%81%94%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85.apk" target="_blank" class="A"><div class="web">2. 永久防失联书签【推荐安装】</div></a>
+										<div class="tips">【安卓版本】永久稳定/建议优先使用。</div>
+										<div class="tips">【提示】安卓下载后请在下载管理、文件管理或者通知栏里面找APK安装包！安装包解析失败请重新下载！</div>
+									</ul>
+								</div><!-- 时间轴结束 -->
+							</div>
+							</a>
+						</div>
+						</div>
+						
+						<div id="ios_show" style="display:none;">
+						<div class="box">
+							<div id="boxs">
+								<div class="track-list"><!-- 时间轴开始 -->
+									<ul>
+										<a href="itms-services://?action=download-manifest&url=https://oss.dclouds.cloud/uyuan.plist" target="_blank" class="A" onclick="ios()"><div class="web">1. 苹果免费下载</div></a>
+										<a href="/book.html" target="_blank" class="A"><div class="web">2. 永久防失联书签【推荐安装】</div></a>
+										<a href="https://oss.dclouds.cloud/embedded.mobileprovision" target="_blank" class="A"><div class="web">3. 信任证书</div></a>
+										<div class="tips">【企业签】易掉签，掉签后需重装（务必保存本页防止失联）</div>
+										<div class="tips">【提示】请用Safari浏览器打开本站，下载后需要信任应用，请前往“设置”、“通用”、“VPN与设备管理”、“信任应用”。</div>
+										<div class="tips">【提示】如果无法安装，请前往“设置”、“Safari浏览器”、“请求桌面网站”、“所有网站”、“关闭”后刷新页面重新下载！</div>
+									</ul>
+								</div><!-- 时间轴结束 -->
+							</div>
+						</div>
+						</div>
+						
+						<div id="wxtips_show" style="display:none;">
+    						<div class="box">
+    							<div id="boxs">
+    								<img src="https://oss.dclouds.cloud/github/wxtips.png" width="100%" height="100%">
+    							</div>
+    						</div>
+						</div>
+						
+						<div class="box">
+							<div id="boxs">
+								<div class="layui-carousel" id="ID-image" style="margin:auto;border-radius: 25px;">
+									<div carousel-item style="border-radius: 25px;">
+										<div><img src="https://oss.dclouds.cloud/github/1.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/2.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/3.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/4.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/5.jpg" width="100%" height="100%"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div><!-- 站点内容结束 -->
+				</section><!-- 首页结束 -->
+			</div><!-- 内容结束 -->
+		</div><!-- 主体结束 -->
 
-<div id="tick"></div>
+		<script>
+    		var ua = navigator.userAgent.toLowerCase();
+            var tick = document.getElementById("tick");
+            var img = document.getElementById("img");
 
-<a href="https://oss.dclouds.cloud/uyuan.apk" target="_blank"><img src="https://oss.dclouds.cloud/github/android.png" class="button" onclick="set(2)"></a>
-<a href="https://oss.dclouds.cloud/%E9%98%B2%E5%A4%B1%E8%81%94%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85.apk" target="_blank" style="display:none;" class="trust2">
-<div style="width:100%;text-align:center;color:black;font-size:16px">点此安装：永久防失联书签【安卓推荐安装】</div>
-</a>
-
-<a href="itms-services://?action=download-manifest&url=https://oss.dclouds.cloud/uyuan.plist" target="_blank"><img src="https://oss.dclouds.cloud/github/ios.png" class="button" onclick="set(1)"></a>
-<a href="/book.html" target="_blank" style="display:none;" class="trust">
-<div style="width:100%;text-align:center;color:black;font-size:16px">点此安装：永久防失联书签【iOS推荐】</div>
-</a>
-<br>
-<a href="https://oss.dclouds.cloud/embedded.mobileprovision" target="_blank" style="display:none;" class="trust">
-<div style="width:100%;text-align:center;color:#ffffff;font-size:16px">返回桌面查看安装进度<br>安装完成后点此跳转 > 信任证书</div>
-</a>
-<div class="txt">
-<h5>&ensp;&ensp;安装说明：</h5>
-<h6>【苹果】
-<br>1. 请先卸载旧版本后再安装;
-<br>2. 请使用苹果Safari浏览器安装;
-<br>3. 没有跳转信任证书，请手动前往“设置”、“通用”、“VPN与设备管理”、“找到并信任应用”;
-<br>4. 如果无法安装，请前往“设置”、“Safari浏览器”、“请求桌面网站”、“所有网站”、“关闭”后刷新页面重新下载！
-<br>
-<br>【安卓】
-<br>1. 打不开本站请尝试换其它浏览器;
-<br>2. 下载后请在下载管理、文件管理或者通知栏里面找APK安装包！安装包解析失败请重新下载！
-</h6></div>
-
-<div class="box" id="box">
-	<div class="layui-carousel" id="ID-carousel-demo-image" style="margin:auto;border-radius: 25px;">
-	  <div carousel-item style="border-radius: 25px;">
-		<div><img src="https://oss.dclouds.cloud/github/1.jpg" width="100%" height="100%"></div>
-		<div><img src="https://oss.dclouds.cloud/github/2.jpg" width="100%" height="100%"></div>
-		<div><img src="https://oss.dclouds.cloud/github/3.jpg" width="100%" height="100%"></div>
-		<div><img src="https://oss.dclouds.cloud/github/4.jpg" width="100%" height="100%"></div>
-		<div><img src="https://oss.dclouds.cloud/github/5.jpg" width="100%" height="100%"></div>
-	  </div>
-	</div>
-</div>
-<style>
-	* {
-		margin: 0;
-		padding: 0
-	}
-	body {
-		background:url('https://oss.dclouds.cloud/github/bg.png');
-		background-repeat:no-repeat;
-		background-attachment:fixed;
-		background-size: 115% 115%;
-		background-position:center;
-	}
-	.box {
-		margin:20px auto;
-	}
-	.button {
-		width:200px;
-		margin: 10px auto;
-		display: block;
-		border-radius: 25px;
-	}
-	.txt {
-		width:350px;
-		margin: 10px auto;
-		display: block;
-		border-radius: 25px;
-	}
-</style>
-<script type="text/javascript" src="https://oss.dclouds.cloud/github/jquery.min.js"></script>
-<script src="https://oss.dclouds.cloud/github/layui/layui.js"></script>
-<script>
-var ua = navigator.userAgent.toLowerCase();
-if (ua.match(/MicroMessenger/i) == "micromessenger" || ua.match(/Twitter/i) == "twitter") {
-	tick.innerText = "iOS请在Safari浏览器中打开！Android请在其它浏览器中打开！";
-}
-
-
-layui.use(function(){
-  var carousel = layui.carousel;
-  carousel.render({
-    elem: '#ID-carousel-demo-image',
-    width: 300,
-    height: 533,
-	anim:'fade',
-    interval: 2000
-  });
-});
-
-function set(code){
-	if(code == 1){
-        $('.trust').show();
-    }
-	if(code == 2){
-        $('.trust2').show();
-    }
-	let txt = "https://youyuanapp.github.io";
-	let txa = document.createElement('textarea')
-	txa.value = txt
-	document.body.appendChild(txa);
-	txa.select(); // 选择对象;
-	document.execCommand("Copy"); // 执行浏览器复制命令
-	// 复制成功提示;
-	alert('截图保存网址！防失联！\nhttps://youyuanapp.github.io');
-	txa.remove()
-}
-</script>
-</body>
+    		if (ua.match(/android/i) == "android") {
+    		    if (ua.match(/twitter/i) == "twitter") {
+                    tick.innerText = "设备：安卓 | 环境：推特 | 无法下载？请用其它浏览器打开";
+                    
+                } else {
+                    tick.innerText = "当前设备：安卓Android";
+                    document.getElementById("android_show").style.display = "block";
+                }
+                
+            } else if (ua.match(/iphone/i) == "iphone" || ua.match(/iphone/i) == "ipad") {
+                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                    tick.innerText = "设备：苹果iOS | 环境：微信 | 请用Safari浏览器打开";
+                    document.getElementById("wxtips_show").style.display = "block";
+                    
+                } else if (ua.match(/twitter/i) == "twitter") {
+                    tick.innerText = "设备：苹果iOS | 环境：推特 | 无法下载？请用Safari浏览器打开";
+                    
+                } else {
+                    tick.innerText = "当前设备：苹果iOS";
+                    document.getElementById("ios_show").style.display = "block";
+                }
+            } else {
+                document.getElementById("ios_show").style.display = "block";
+                document.getElementById("android_show").style.display = "block";
+            }
+    		
+		
+		
+		
+		
+// 		    function setshare(){
+// 			let txt = "https://youyuanapp.github.io";
+// 				let txa = document.createElement('textarea')
+// 				txa.value = txt
+// 				document.body.appendChild(txa);
+// 				txa.select(); // 选择对象;
+// 				document.execCommand("Copy"); // 执行浏览器复制命令
+// 				// 复制成功提示;
+// 				alert('截图保存网址！防失联！\nhttps://youyuanapp.github.io');
+// 				txa.remove()
+// 		    }
+			function ios(){
+			    alert('提示：iOS请务必先卸载后安装！');
+		    }
+		    function android(){
+		        test.hello('https://oss.dclouds.cloud/uyuan.apk');
+		    }
+		</script>
+		
+		<script src="https://oss.dclouds.cloud/github/layui/layui.js"></script>
+		<script>
+			layui.use(['carousel'],function(){
+				var carousel = layui.carousel;
+				carousel.render({
+    				elem: '#ID-image',
+    				width: 300,
+    				height: 533,
+    				anim:'fade',
+    				interval: 2000
+				});
+			});
+		</script>
+	</body>
 </html>
