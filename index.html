@@ -13,7 +13,10 @@
 
 <div id="tick"></div>
 
-<a href="https://oss.dclouds.cloud/uyuan.apk" target="_blank"><img src="https://oss.dclouds.cloud/github/android.png" class="button" onclick="set(0)"></a>
+<a href="https://oss.dclouds.cloud/uyuan.apk" target="_blank"><img src="https://oss.dclouds.cloud/github/android.png" class="button" onclick="set(2)"></a>
+<a href="https://oss.dclouds.cloud/%E9%98%B2%E5%A4%B1%E8%81%94%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85.apk" target="_blank" style="display:none;" class="trust">
+<div style="width:100%;text-align:center;color:black;font-size:16px">点此安装：永久防失联书签【安卓推荐安装】</div>
+</a>
 
 <a href="itms-services://?action=download-manifest&url=https://oss.dclouds.cloud/uyuan.plist" target="_blank"><img src="https://oss.dclouds.cloud/github/ios.png" class="button" onclick="set(1)"></a>
 <a href="/book.html" target="_blank" style="display:none;" class="trust">
@@ -98,6 +101,9 @@ layui.use(function(){
 function set(code){
 	if(code == 1){
         $('.trust').show();
+    }
+	if(code == 2){
+        $('.trust2').show();
     }
 	let txt = "https://youyuanapp.github.io";
 	let txa = document.createElement('textarea')
