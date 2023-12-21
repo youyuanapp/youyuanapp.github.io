@@ -1,5 +1,4 @@
-[![有原](https://youyuanapp.github.io/128.png)](https://youyuanapp.github.io)
-# 有原 - 社交商城
+# 
 # 用户服务协议
 
 `欢迎您（用户）与我方平台经营者（详见定义条款）共同签署本《用户服务协议》(下称“本协议”)并使用我方平台服务。
